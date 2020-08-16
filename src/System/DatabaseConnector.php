@@ -5,6 +5,10 @@ class DatabaseConnector {
 
     private $dbConnection = null;
 
+    /**
+     * constructor function
+     * instantiates db connection
+    **/
     public function __construct()
     {
         $host = getenv('DB_HOST');
@@ -24,6 +28,9 @@ class DatabaseConnector {
         }
     }
 
+    /**
+     * retrieve db connection instance
+     */
     public function getConnection()
     {
         return $this->dbConnection;
